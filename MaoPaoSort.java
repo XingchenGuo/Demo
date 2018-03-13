@@ -7,10 +7,10 @@ class Demo{
 		}
 		
 		System.out.println();
-		for (int i = 0 ; i < a.length;i ++){
-			for(int j = 0; j < a.length-1-i;j++){
-				if (a[j] < a[j+1]){
-					int temp = a[j];
+		for (int i = 0 ; i < a.length;i ++){//外层循环控制总次数
+			for(int j = 0; j < a.length-1-i;j++){//内存循环将最大或最小的向外移动
+				if (a[j] < a[j+1]){	//比较相邻的两个数的大小
+					int temp = a[j];	//符合条件的则进行移动
 					a[j] = a[j+1];
 					a[j+1] = temp;
 				}
